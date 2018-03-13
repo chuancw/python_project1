@@ -33,3 +33,7 @@ print(10/3)
 print(10//3)
 print(10 % 3)
 
+print('hello, %s' % 'world')
+print('hello, %s, you have $%d' %('wangchuan',1000000))
+
+print('%.2f' % 3.1415926)
