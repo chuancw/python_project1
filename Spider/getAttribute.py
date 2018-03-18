@@ -8,6 +8,6 @@ if __name__ == '__main__':
     print('info 打印信息：', response.info())
     print('getcode打印信息： ', response.getcode())
 
-
+ 
 
 
