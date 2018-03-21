@@ -105,3 +105,23 @@ session = requests.Session()
 session.get('http://httpbin.org/cookies/set/number/123456789')
 response = session.get('http://httpbin.org/cookies')
 print(response.text)
+
+# 证书
+# response = requests.get('https://www.12306.cn')
+# print(response.status_code)
+
+response = requests.get('https://www.12306.cn', verify=False)
+print(response.status_code)
+
+
+# 设置代理
+proxies = {
+    "http": "http://.....",
+    "https:": "https://....."
+}
+# response = requests.get("https://www.taobao.com", proxies=proxies)
+
+
+
+
+
