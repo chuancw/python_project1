@@ -115,6 +115,7 @@ print(response.status_code)
 
 
 # 设置代理
+ # http https 代理
 proxies = {
     "http": "http://.....",
     "https:": "https://....."
@@ -122,6 +123,22 @@ proxies = {
 # response = requests.get("https://www.taobao.com", proxies=proxies)
 
 
+ # socks 代理
+  # 需要安装代理模块 socks
 
 
+# 超时设置
+print(requests.get('https://www.taobao.com', timeout=1).status_code)
+
+from requests.exceptions import ReadTimeout, ConnectionError
+try:
+    response = requests.get('http://httpbin.org/get', timeout=0.1)
+    print(response.status_code)
+except ConnectionError:
+    print('TimeOut')
+
+
+# 认证设置 用户名 密码
+from requests.auth import HTTPBasicAuth
+response = requests.get('http://.....', auth=HTTPBasicAuth('username', 'password'))
 
