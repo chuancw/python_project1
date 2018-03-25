@@ -13,6 +13,8 @@ soup = BeautifulSoup(html, 'lxml')
 print(soup.prettify())
 print(soup.title.string)
 
+
+
 print(soup.title)
 print(soup.head)
 print(soup.p)   # 输出了第一个p标签
