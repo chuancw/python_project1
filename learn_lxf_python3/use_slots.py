@@ -23,6 +23,7 @@ s2 = Student()
 s2.set_age(100)
 print(s2.age)
 
+
 # ============= 限制实例的属性 __slots__ ============
 class Teacher(object):
     __slots__ = ('name', 'age')
